@@ -2,7 +2,7 @@
 set -e
 set -x
 
-aws eks --region us-west-2 update-kubeconfig --name ow-eksctl
+aws eks --region us-west-2 update-kubeconfig --name "${CLUSTER_NAME}"
 echo "$HOME"
 whoami
 kubectl get all --namespace=dev02
