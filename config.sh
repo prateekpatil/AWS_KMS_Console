@@ -2,9 +2,9 @@
 set -e
 set -x
 
-aws eks --region us-west-2 update-kubeconfig --name "${CLUSTER_NAME}"
+aws eks --region "${AWS_REGION}" update-kubeconfig --name "${CLUSTER_NAME}"
 echo "$HOME"
 whoami
-kubectl get all --namespace=dev02
+kubectl get all
 #Let cat do the work for you
 cat
